@@ -4,11 +4,19 @@
 
 <div align="center">
    Consulta los detalles de este coding challenge <a href="https://github.com/midudev/pruebas-tecnicas/blob/main/pruebas/01-reading-list/README.md" target="_blank">haciendo clic aquí</a>
-   <br/><br/>
-   Alojado en <a href="https://vercel.com/" target="_blank">Vercel</a>.
+</div>
+
+<div align="center">
+  <h3>
+    <a href="https://reading-list-phi-woad.vercel.app/">
+      Prueba la App aqui!!
+    </a>
+  </h3>
 </div>
 
 <br />
+
+
 
 ## Tabla de Contenidos
 
