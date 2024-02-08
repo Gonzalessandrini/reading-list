@@ -1,0 +1,46 @@
+/* Definimos los estilos del formulario de búsqueda */
+
+.search-form {
+    /* Le damos un ancho máximo y un margen automático para centrarlo */
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .search-label {
+    /* Le damos un color, una fuente y un tamaño al texto del label */
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    /* Lo ocultamos para que no se vea en la pantalla */
+    display: none;
+  }
+  
+  .search-input {
+    /* Le damos un borde redondeado, un relleno y un color de fondo al contenedor del input */
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    /* Lo hacemos flexible para que se adapte al ancho del formulario */
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    /* Le damos un margen derecho al icono de búsqueda */
+    margin-right: 10px;
+  }
+  
+  .search-field {
+    /* Le quitamos el borde y el fondo al input */
+    border: none;
+    background: none;
+    /* Le damos un color, una fuente y un tamaño al texto del input */
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    /* Le damos un ancho flexible para que ocupe el espacio restante */
+    flex: 1;
+    /* Le quitamos el outline para que no se vea el foco al seleccionarlo */
+    outline: none;
+  }
+  

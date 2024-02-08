@@ -1,0 +1,40 @@
+.reading-list {
+  width: 100%; /* O podrías definir un ancho fijo si prefieres */
+  max-width: 400px; /* Establece un ancho máximo si es necesario */
+  margin-right: 220px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Un color de fondo suave */
+  border-radius: 8px; /* Bordes redondeados para la estética */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+}
+
+.reading-list ul {
+  list-style-type: none; /* Remueve los estilos de lista por defecto */
+  padding: 0;
+  margin: 0;
+}
+
+.reading-list li {
+  display: flex;
+  align-items: center; /* Alinea los elementos del ítem verticalmente */
+  margin-bottom: 10px; /* Espacio entre ítems de la lista */
+}
+
+.book-image {
+  width: 50px; /* O el tamaño que prefieras */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  border-radius: 4px; /* Opcional: bordes redondeados para la imagen */
+}
+
+.remove-button {
+  margin-left: auto; /* Empuja el botón hacia la derecha */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Ajusta esto según necesites */
+}
+
+.remove-button:hover {
+  color: red; /* Cambia el color al pasar el mouse para indicar acción */
+}

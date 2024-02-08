@@ -1,0 +1,131 @@
+.book {
+  display: grid;
+  grid-template-areas: "cover" "details" "options";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.book:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.book__cover {
+  grid-area: cover;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.book__cover-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.book__options {
+  grid-area: options;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.book__details {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centramos el contenido verticalmente */
+}
+
+.book__title {
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book__author {
+  color: #666;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book__info {
+  display: flex;
+  align-items: center;
+  color: #999;
+  justify-content: center; /* Centramos el contenido verticalmente */
+}
+
+.book__genre,
+.book__pages {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.book__genre {
+  background-color: var(--genre-color);
+}
+
+.book__pages {
+  background-color: #ddd;
+  margin-left: 10px;
+}
+
+:root {
+  --fantasy-color: #f0e68c;
+  --sci-fi-color: #add8e6;
+  --horror-color: #ff6347;
+  --romance-color: #ffb6c1;
+  --mystery-color: #c0c0c0;
+  --default-color: #ddd;
+}
+
+.book__genre[genre="Fantasía"] {
+  background-color: var(--fantasy-color);
+}
+
+.book__genre[genre="Ciencia ficción"] {
+  background-color: var(--sci-fi-color);
+}
+
+.book__genre[genre="Terror"] {
+  background-color: var(--horror-color);
+}
+
+.book__genre[genre="Romance"] {
+  background-color: var(--romance-color);
+}
+
+.book__genre[genre="Misterio"] {
+  background-color: var(--mystery-color);
+}
+
+.book__genre:not([genre]) {
+  background-color: var(--default-color);
+}
+
+@keyframes flyRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
