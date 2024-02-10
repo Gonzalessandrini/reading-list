@@ -1,23 +1,58 @@
 .header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 3em; /* Ajustar según el tamaño de pantalla */
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.header-filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.SearchBar, .Filters {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* Media queries */
+
+/* Para tabletas */
+@media (max-width: 768px) {
   .header-title {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2em; /* Tamaño más pequeño para tabletas */
+    margin-bottom: 15px;
   }
   
   .header-filters {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column; /* Cambiar a columna para evitar apretujamiento */
   }
   
   .SearchBar, .Filters {
-    width: 100%;
-    margin: 10px 0;
+    margin: 5px 0; /* Menor margen para ahorrar espacio */
+  }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.5em; /* Tamaño aún más pequeño para móviles */
+    margin-bottom: 10px;
   }
   
+  .header-filters {
+    flex-direction: column;
+    align-items: center; /* Asegurarse de que alinea todo al centro correctamente */
+  }
+  
+  .SearchBar, .Filters {
+    width: 90%; /* Dar un poco de margen a los lados */
+    margin: 5px 0;
+  }
+}

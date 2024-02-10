@@ -1,35 +1,56 @@
 .books-list {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* 2 fracciones para la lista de libros, 1 fracción para la lista de lectura */
-  grid-gap: 20px; /* Espacio entre las columnas */
-  padding: 20px; /* Padding alrededor de todo el contenedor para darle espacio */
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
 }
 
 .books-section, .reading-list-section {
-  background-color: #f0f0f0; /* Un fondo sutil para cada sección */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 20px; /* Padding interno */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 h3 {
-  color: #333; /* Color para los títulos */
-  margin-bottom: 15px; /* Espacio debajo de los títulos */
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .books-container {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajuste para los elementos de la lista de libros */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
 }
 
+/* Mejoras para dispositivos móviles */
 @media (max-width: 768px) {
   .books-list {
-    grid-template-columns: 1fr; /* En pantallas pequeñas, usa 1 columna */
+    grid-template-columns: 1fr;
   }
 
   .books-section, .reading-list-section {
-    margin-bottom: 20px; /* Espacio entre secciones para móviles */
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 1.2rem; /* Ajuste del tamaño del texto para mejorar la legibilidad */
+  }
+
+  .books-container {
+    grid-gap: 15px; /* Aumentar un poco el espacio entre libros para toques más fáciles */
+  }
+
+  .books-section, .reading-list-section {
+    padding: 15px; /* Reducir el padding para usar mejor el espacio */
+  }
+
+  /* Ajustes adicionales para botones o elementos interactivos si los hay */
+  .button, .book__action, .reading-list__action {
+    min-width: 44px; /* Buen tamaño mínimo para áreas tocables */
+    min-height: 44px; /* Buen tamaño mínimo para áreas tocables */
+    padding: 10px; /* Asegurar que los botones/enlaces son fáciles de tocar */
+    font-size: 1rem; /* Aumentar el tamaño del texto para mejor legibilidad */
   }
 }

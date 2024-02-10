@@ -2,7 +2,6 @@ import SearchIcon from "../Icons/SearchIcon";
 import "./SearchBar.css";
 
 export function SearchBar({ onSubmit, onChange, placeholder }) {
- console.log(onChange)
  
   return (
     <form onSubmit={onSubmit} className="search-form">
