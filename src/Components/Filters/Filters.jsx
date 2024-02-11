@@ -23,7 +23,7 @@ export function Filters () {
   }
 
   return (
-    <section className=''>
+    <section>
 
     <div className='range-container'>
       <label htmlFor={pagesFilterId}>Numero de paginas</label>

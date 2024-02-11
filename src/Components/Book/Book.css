@@ -129,3 +129,46 @@
     opacity: 0;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .book {
+    grid-template-areas:
+      "cover"
+      "details"
+      "options";
+    padding: 10px; /* Reducir el padding en dispositivos más pequeños */
+  }
+
+  .book__cover-img {
+    height: auto; /* Ajustar para que la altura sea automática y la imagen mantenga su aspecto */
+  }
+
+  .book__details,
+  .book__options {
+    text-align: center; /* Centrar el contenido para una mejor visualización en pantallas pequeñas */
+  }
+
+  .book__details-title,
+  .book__details-author,
+  .book__details-meta {
+    font-size: 90%; /* Reducir el tamaño del texto para adaptarse a pantallas más pequeñas */
+  }
+
+  .book__options-button {
+    padding: 8px 12px; /* Ajustar el tamaño del botón para que sea más fácil de tocar */
+    font-size: 0.8rem; /* Reducir el tamaño de la fuente del botón */
+  }
+
+  /* Ajustar los géneros para que no ocupen demasiado espacio */
+  .book__genre,
+  .book__pages {
+    padding: 3px 6px;
+    font-size: 0.8rem;
+  }
+  .books-container {
+    grid-template-columns: repeat(2, 1fr); /* Cambio a 2 columnas para pantallas más pequeñas */
+    grid-gap: 10px; /* Mantenemos el espacio entre los libros */
+  }
+}

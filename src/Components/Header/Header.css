@@ -2,57 +2,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
 }
 
 .header-title {
-  font-size: 3em; /* Ajustar según el tamaño de pantalla */
+  font-size: 24px; /* Ajusta según lo necesites */
+  text-align: center;
   margin-bottom: 20px;
-  color: #333;
 }
 
 .header-filters {
   display: flex;
   flex-direction: row;
-  align-items: center;
-}
-
-.SearchBar, .Filters {
+  justify-content: space-around;
   width: 100%;
-  margin: 10px 0;
 }
 
-/* Media queries */
+.search-container {
+  flex: 1;
+  margin-right: 10px; /* Asegura algo de espacio entre los elementos */
+}
 
-/* Para tabletas */
+.filters-container {
+  flex: 1;
+}
+
+/* Estilos para SearchBar y Filters deberían ser adecuadamente responsivos dentro de sus componentes */
+
 @media (max-width: 768px) {
-  .header-title {
-    font-size: 2em; /* Tamaño más pequeño para tabletas */
-    margin-bottom: 15px;
-  }
-  
-  .header-filters {
-    flex-direction: column; /* Cambiar a columna para evitar apretujamiento */
-  }
-  
-  .SearchBar, .Filters {
-    margin: 5px 0; /* Menor margen para ahorrar espacio */
-  }
-}
-
-/* Para móviles */
-@media (max-width: 480px) {
-  .header-title {
-    font-size: 1.5em; /* Tamaño aún más pequeño para móviles */
-    margin-bottom: 10px;
-  }
-  
   .header-filters {
     flex-direction: column;
-    align-items: center; /* Asegurarse de que alinea todo al centro correctamente */
+    align-items: center;
   }
-  
-  .SearchBar, .Filters {
-    width: 90%; /* Dar un poco de margen a los lados */
-    margin: 5px 0;
+
+  .search-container,
+  .filters-container {
+    width: 100%; /* Ocupan todo el ancho disponible */
+    margin-right: 0; /* Remover margen derecho para el search-container en vista móvil */
+    margin-bottom: 10px; /* Espacio entre search y filters en vista móvil */
+  }
+
+  .header-title {
+    font-size: 20px; /* Ligeramente más pequeño para pantallas pequeñas */
   }
 }

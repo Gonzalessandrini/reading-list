@@ -39,3 +39,24 @@
   color: red; /* Cambia el color al pasar el mouse para indicar acción */
 }
 
+@media (max-width: 768px) {
+  .reading-list {
+    margin-right: 20px; /* Reduce el margen en pantallas más pequeñas */
+    max-width: none; /* Permite que el componente se expanda según el contenedor */
+  }
+
+  .book-image {
+    width: 40px; /* Opcionalmente, reduce el tamaño de las imágenes para pantallas pequeñas */
+  }
+
+  .remove-button {
+    font-size: 14px; /* Reduce un poco el tamaño del texto en el botón para pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .reading-list {
+    margin: 0; /* En dispositivos muy pequeños, elimina los márgenes laterales */
+    padding: 10px; /* Reduce el padding para aprovechar más el espacio */
+  }
+}

@@ -9,7 +9,7 @@ export function Header({ handleChange, handleSubmit, search, debouncedFilterBook
     <header className="header-container">
       <h1 className="header-title">Reading-List 📚</h1>
       <section className='header-filters'>
-        <div>
+        <div className='search-container'>
           <SearchBar
             onSubmit={(e) => handleSubmit(e, filterBooks, filteredBooks)}
             onChange={(e) => handleChange(e, debouncedFilterBooks)}
@@ -17,7 +17,7 @@ export function Header({ handleChange, handleSubmit, search, debouncedFilterBook
             placeholder='Buscar por título...'
           />
         </div>
-        <div>
+        <div className='filters-container'>
             <Filters/>
         </div>
 
