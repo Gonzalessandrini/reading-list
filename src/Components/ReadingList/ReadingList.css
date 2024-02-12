@@ -44,6 +44,7 @@
     margin: 0; /* Optimización del uso del espacio */
     padding: 10px; /* Espacio interior reducido */
     max-width: 100%; /* Se ajusta para ocupar el ancho completo */
+    color: rgb(37, 35, 35);
   }
 
   .book-image {
