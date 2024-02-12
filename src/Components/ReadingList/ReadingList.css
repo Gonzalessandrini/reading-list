@@ -1,10 +1,10 @@
 .reading-list {
-  width: 100%; /* O podrías definir un ancho fijo si prefieres */
-  max-width: 400px; /* Establece un ancho máximo si es necesario */
-  margin-right: 220px;
-  padding: 20px;
-  background-color: #f9f9f9; /* Un color de fondo suave */
-  border-radius: 8px; /* Bordes redondeados para la estética */
+  width: 100%;
+  max-width: 100%; /* Se ajusta para usar todo el ancho disponible en dispositivos pequeños */
+  margin-right: 20px; /* Ajustado para consistencia en todos los tamaños */
+  padding: 15px; /* Ajuste moderado para dispositivos móviles */
+  background-color: #f9f9f9;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
 }
 
@@ -21,10 +21,10 @@
 }
 
 .book-image {
-  width: 50px; /* O el tamaño que prefieras */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
-  border-radius: 4px; /* Opcional: bordes redondeados para la imagen */
+  width: 60px; /* Ajustado para visibilidad mejorada en dispositivos móviles */
+  height: auto;
+  margin-right: 10px;
+  border-radius: 4px;
 }
 
 .remove-button {
@@ -39,24 +39,22 @@
   color: red; /* Cambia el color al pasar el mouse para indicar acción */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .reading-list {
-    margin-right: 20px; /* Reduce el margen en pantallas más pequeñas */
-    max-width: none; /* Permite que el componente se expanda según el contenedor */
+    margin: 0; /* Optimización del uso del espacio */
+    padding: 10px; /* Espacio interior reducido */
+    max-width: 100%; /* Se ajusta para ocupar el ancho completo */
   }
 
   .book-image {
-    width: 40px; /* Opcionalmente, reduce el tamaño de las imágenes para pantallas pequeñas */
+    width: 40px; /* Más ajustes para mejorar la visibilidad en pantallas muy pequeñas */
   }
 
   .remove-button {
-    font-size: 14px; /* Reduce un poco el tamaño del texto en el botón para pantallas pequeñas */
+    font-size: 14px; /* Adecuado para facilidad de clic en pantallas pequeñas */
   }
-}
 
-@media (max-width: 480px) {
-  .reading-list {
-    margin: 0; /* En dispositivos muy pequeños, elimina los márgenes laterales */
-    padding: 10px; /* Reduce el padding para aprovechar más el espacio */
+  .reading-list li div p {
+    font-size: 12px; /* Reducción adicional para texto del género */
   }
 }

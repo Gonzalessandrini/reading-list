@@ -24,7 +24,9 @@ export function BookList({ books, removeBookFromList, addToBookList }) {
                     ))}
                 </ul>
             </div>
-            <button onClick={toggleReadingList} className="reading-list-toggle">Toggle Reading List</button>
+            <button onClick={toggleReadingList} className="reading-list-toggle">
+              {isReadingListVisible ? 'Libros disponibles' : 'Lista de lectura'}
+            </button>
             <div className={`reading-list-section ${isReadingListVisible ? 'reading-list-active' : ''}`}>
                 <h3>Lista de lectura ({readingList.length})</h3>
                 <ReadingList addToBookList={addToBookList} />
