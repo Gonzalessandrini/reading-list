@@ -6,7 +6,7 @@ import { useReadingList } from "../../Hooks/useReadingList";
 
 export function BookList({ books, removeBookFromList, addToBookList }) {
     const { readingList } = useReadingList();
-    const [isReadingListVisible, setIsReadingListVisible] = useState(true);
+    const [isReadingListVisible, setIsReadingListVisible] = useState(false);
 
     const toggleReadingList = () => {
         setIsReadingListVisible(!isReadingListVisible);
