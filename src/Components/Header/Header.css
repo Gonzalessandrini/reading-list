@@ -45,5 +45,6 @@
 
   .header-title {
     font-size: 20px; /* Ligeramente más pequeño para pantallas pequeñas */
+    color: black;
   }
 }

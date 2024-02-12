@@ -24,7 +24,10 @@ h3 {
   grid-gap: 10px;
 }
 
-/* Mejoras para dispositivos móviles */
+.reading-list-toggle {
+  display: none; /* Esconder por defecto y solo mostrar en móviles */
+}
+
 @media (max-width: 768px) {
   .books-list {
     grid-template-columns: 1fr;
@@ -34,23 +37,50 @@ h3 {
     margin-bottom: 20px;
   }
 
+  .reading-list-section {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    overflow-y: auto;
+    z-index: 100;
+    transition: right 0.3s ease-in-out;
+    padding: 20px; /* Asegura espacio para el contenido interno */
+    box-sizing: border-box; /* Asegura que el padding no añade ancho al elemento */
+  }
+
+  .reading-list-active {
+    right: 0;
+  }
+
+  .reading-list-toggle {
+    display: block; /* Mostrar el botón en móviles */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 101; /* Asegurarse que está sobre otros elementos */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #2e3236;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   h3 {
-    font-size: 1.2rem; /* Ajuste del tamaño del texto para mejorar la legibilidad */
+    font-size: 1.2rem;
   }
 
-  .books-container {
-    grid-gap: 15px; /* Aumentar un poco el espacio entre libros para toques más fáciles */
+  .books-container, .books-section, .reading-list-section {
+    padding: 15px;
   }
 
-  .books-section, .reading-list-section {
-    padding: 15px; /* Reducir el padding para usar mejor el espacio */
-  }
-
-  /* Ajustes adicionales para botones o elementos interactivos si los hay */
   .button, .book__action, .reading-list__action {
-    min-width: 44px; /* Buen tamaño mínimo para áreas tocables */
-    min-height: 44px; /* Buen tamaño mínimo para áreas tocables */
-    padding: 10px; /* Asegurar que los botones/enlaces son fáciles de tocar */
-    font-size: 1rem; /* Aumentar el tamaño del texto para mejor legibilidad */
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+    font-size: 1rem;
   }
 }
