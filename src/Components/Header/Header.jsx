@@ -20,8 +20,6 @@ export function Header({ handleChange, handleSubmit, search, debouncedFilterBook
         <div className='filters-container'>
             <Filters/>
         </div>
-
-        
       </section>
     </header>
   )
