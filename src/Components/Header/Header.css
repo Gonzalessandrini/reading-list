@@ -4,45 +4,50 @@
   align-items: center;
   padding: 20px;
   background-color: #f5f5f5;
+  width: 100%; /* Ajuste el ancho al 100% para adaptarse a la pantalla */
+  box-sizing: border-box; /* Incluya el padding en el ancho total */
 }
 
 .header-title {
-  font-size: 24px; /* Ajusta según lo necesites */
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: 32px; /* Aumenta el tamaño del texto */
+  font-family: 'Arial', sans-serif; /* Cambia la fuente a Arial o a una fuente profesional */
+  font-weight: bold; /* Texto en negrita */
+  letter-spacing: 1px; /* Ajusta el espaciado entre caracteres */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  margin-bottom: 10px; /* Reduzca el margen inferior para un mejor ajuste */
+  color: #333; /* Cambia el color del texto a un tono más oscuro para mejorar la legibilidad */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Agrega una ligera sombra de texto para resaltar */
 }
 
 .header-filters {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column; /* Cambiado a columna en dispositivos móviles */
+  align-items: center; /* Centrado en dispositivos móviles */
   width: 100%;
 }
 
-.search-container {
-  flex: 1;
-  margin-right: 10px; /* Asegura algo de espacio entre los elementos */
-}
-
+.search-container,
 .filters-container {
-  flex: 1;
+  width: 100%; /* Ocupan todo el ancho disponible */
+  margin-bottom: 10px; /* Espacio entre search y filters en vista móvil */
 }
 
 /* Estilos para SearchBar y Filters deberían ser adecuadamente responsivos dentro de sus componentes */
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .header-filters {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .search-container,
   .filters-container {
-    width: 100%; /* Ocupan todo el ancho disponible */
-    margin-right: 0; /* Remover margen derecho para el search-container en vista móvil */
-    margin-bottom: 10px; /* Espacio entre search y filters en vista móvil */
+    width: auto; /* Restaurar el ancho automático en dispositivos de escritorio */
+    margin-bottom: 0; /* Restaurar el margen inferior en dispositivos de escritorio */
   }
+}
 
+@media (max-width: 768px) {
   .header-title {
     font-size: 20px; /* Ligeramente más pequeño para pantallas pequeñas */
     color: black;
